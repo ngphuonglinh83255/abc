@@ -1,0 +1,74 @@
+html, body {
+   
+}
+.b2 {
+    border: 1px solid #ccc;
+    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.b1 {
+    width: 1200px;
+    height: 300px;
+
+}
+.b11 {
+    border: 1px solid #ccc;
+    width: 1150px;
+    height: 30px;
+    background-color: rgb(38, 114, 79);
+}
+.ảnh{
+    width: 1150px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+.grid-container {
+    display: grid; /* Kích hoạt bố cục grid */
+    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột có kích thước bằng nhau */
+    gap: 10px; /* Khoảng cách giữa các cột */
+  }
+  .column1 {
+    width: 50%;
+    display: inline-block;
+  }
+  .anh1{
+    width: 480px;
+    height: 310px;
+    border: 1px solid #CCC;
+  }
+  .class{
+    width: 480px;
+    height: 280px;
+    border:1px solid #CCC ;
+  }
+
+  
+  .column2 {
+    width: 100%;
+  }
+  .inter{
+    display: inline-block;
+   }
+   .inter1{
+    width: 300px;
+    height: 500px;
+    border: 1px solid #CCC;
+    text-align: justify;
+   }
+
+  .column3 {
+    float: left;
+    width: 100%; 
+    padding: 500px; 
+  }
+  .inter2{
+    width: 40px;
+    height: 400px;
+    border:1px solid #ccc ;
+  }
+
+  
+  
+  
