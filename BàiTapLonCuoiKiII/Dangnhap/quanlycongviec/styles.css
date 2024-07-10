@@ -1,0 +1,497 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.cot1 {
+    border: 1px solid #424242; /* Đường viền khung */
+    border-radius: 0px; /* Bo góc khung */
+    padding: 10px; /* Thêm khoảng cách bên trong khung */
+    margin: 1px; /* Thêm khoảng cách bên ngoài khung */
+    background-color: #ffffff; /* Màu nền của khung */
+}
+
+.cot1_1 {
+    position: relative; /* Đặt relative để chứa phần tử con tuyệt đối */
+    display: flex;
+    align-items: center;
+}
+
+.title-box {
+    margin-right: auto; /* Đẩy title-box sang trái */
+    padding: 7px; /* Thêm khoảng cách bên trong khung */
+    border: 1px solid #ffffff; /* Đường viền khung */
+    background-color: #ffffff; /* Màu nền của khung */
+    border-radius: 0px; /* Bo góc khung */
+    font-size: 11px;
+}
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.title-box1{
+    font-size: 12px;
+    border: 1px solid #ffffff; /* Đường viền khung */
+    background-color: #ffffff; /* Màu nền của khung */
+    color: #000000;
+}
+.cot1_1 h1 {
+    margin: 0; /* Xóa khoảng cách mặc định của h1 */
+ 
+}
+
+.cot1_1 img {
+    width: 30px;
+    height: 30px; /* Đảm bảo ảnh có kích thước cố định */
+    border-radius: 20%; /* Nếu muốn ảnh có dạng hình tròn */
+}
+
+.container {
+    display: flex; /* Sử dụng flexbox */
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    flex: 1; /* Căn cỡ của các cột */
+    padding: 10px; /* Thêm padding cho khoảng cách */
+    border: 1px solid #515151; /* Thêm viền */
+    display: flex; /* Sử dụng flexbox để chia cột */
+    flex-direction: column; /* Chia cột theo chiều dọc */
+
+}
+
+.column1 {
+    margin-top: 0px;
+    border: 1px solid#5e5b5b;
+
+    padding-right: 20px; /* Đặt lề bên phải là 20px */
+    margin-top: 0px;
+
+}
+.btntongquan-button {
+    margin-left: 70px; /* Điều chỉnh giá trị margin-left tùy thích */
+    display: flex;
+}
+.btntongquan-button i.fi-rr-home::before {
+    content: "\f100"; /* Unicode của icon fi-rr-home */
+    font-family: "Feather";
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.btncongviec-button {
+    margin-left: 70px;
+}
+.btnbaocao-button {
+    margin-left: 70px;
+}
+.vieccuatoi{
+    margin-left: 70px;
+}
+.right-line {
+    width: 1px; /* Độ rộng của đường thẳng */
+    height: 100%; /* Chiều cao của đường thẳng, giống với chiều cao của cột */
+    background-color: black; /* Màu sắc của đường thẳng */
+    position: absolute; /* Đảm bảo đường thẳng được đặt theo tọa độ tuyệt đối */
+    top: 0; /* Đặt ở phía trên cùng của cột */
+    right: 0; /* Đặt ở phía bên phải của cột */
+}
+
+.column2-1 {
+    display: flex;
+    flex-direction: row; /* Xếp các nút theo chiều dọc */
+}
+
+.column2-1 button {
+    margin-right: auto; /* Khoảng cách giữa các nút */
+}
+
+
+.column2-2 {
+    padding-top: 10px; /* Khoảng cách từ phần trên */
+    border-top: 1px solid #ccc; /* Đường viền ở trên */
+    display: flex;
+    flex-direction: column;
+}
+.upper-sub-column{
+    flex: 1;
+    margin-bottom: 20px; /* Khoảng cách giữa hai cột trên dưới */
+    border: 1px solid #ccc; /* Đường viền khung */
+    border-radius: 10px; /* Bo góc khung */
+    padding: 110px; /* Khoảng cách bên trong khung */
+}
+.lower-sub-column {
+    flex: 1;
+    margin-bottom: 20px; /* Khoảng cách giữa hai cột trên dưới */
+    border: 1px solid #ccc; /* Đường viền khung */
+    border-radius: 10px; /* Bo góc khung */
+    padding: 130px; /* Khoảng cách bên trong khung */
+}
+
+.lower-sub-column:last-child {
+    margin-bottom: 0; /* Loại bỏ khoảng cách bên dưới của cột cuối cùng */
+}
+
+.margin-left {
+    margin-right: 5px; /* Khoảng cách giữa các ảnh */
+}
+
+.img-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.img-title-container img {
+    margin-right: 1px; /* Khoảng cách giữa các ảnh và tiêu đề */
+    width: 60px;
+    height: auto;
+}
+
+.title-box1 {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+nav {
+    margin-top: 5px;
+}
+
+nav button {
+    display: block; /* Hiển thị mỗi button trên một dòng */
+    width: 50%; /* Để nút rộng bằng phần tử cha */
+    margin-bottom: 5px; /* Khoảng cách giữa các nút */
+    padding: 10px; /* Thêm khoảng cách bên trong nút */
+    background-color: #fffefe;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+
+}
+nav .nav-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa icon và văn bản */
+}
+nav .nav-buttons button i {
+    display: inline-block;
+    vertical-align: middle;
+}
+nav button:hover {
+    background-color: #7870bf50;
+}
+
+
+.top-section {
+    padding: auto; /* Thêm padding cho khoảng cách */
+    border: 1px solid #ffffff; /* Thêm viền */
+}
+
+.bottom-section {
+    padding: auto; /* Thêm padding cho khoảng cách */
+    border: 1px solid #ffffff; /* Thêm viền */
+}
+.upper-sub-column{
+    border: 1px solid #565656;
+    
+}
+.lower-sub-column{
+    border:1px solid #554f4f;
+}
+
+/* Style buttons inside .cot2 */
+.cot2 button {
+    padding: 5px 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Màu xanh dương */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+    display: block; /* Hiển thị mỗi button trên một dòng */
+    width: 45%; /* Để nút rộng bằng phần tử cha */
+    margin-bottom: 5px; /* Khoảng cách giữa các nút */
+    padding: 10px; /* Thêm khoảng cách bên trong nút */
+}
+.cot2, .cot4, .top-section {
+    display: block;
+    justify-content: flex-end;
+    margin-top: 2px;
+}
+.btn{
+    margin-left: 2px;
+}
+.btnabc{
+    margin-left: 70px;
+}
+.vieccuatoi-button{
+    margin-left: 70px;
+}
+.sukien-button{
+    margin-left: 70px;
+}
+.kehoach-button{
+    margin-left: 70px;
+}
+.cot3{
+    margin-left: 70px;
+}
+
+/* Add a straight line */
+.nav-buttons button::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+/* Add a straight line */
+.nav-buttons button::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+/* Add a straight line to the left of each button */
+.nav-buttons button::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: -10px; /* Adjust the position of the line */
+}
+
+/* cột*/
+.lower-sub-column {
+    flex: 1;
+    margin-bottom: 20px; /* Khoảng cách giữa hai cột trên dưới */
+    border: 1px solid #6d6a6a; /* Đường viền khung */
+    border-radius: 10px; /* Bo góc khung */
+    padding: 30px 20px; /* Sát lề ở trên và dưới là 10px, sát lề bên phải là 20px */
+    padding-left: 1px; /* Sát lề bên trái là 20px */
+
+    }
+
+    
+
+
+
+.container11 {
+    margin-top: 1px; /* Khoảng cách giữa đường thẳng và cột phía trên */
+    margin-bottom: 2px; /* Khoảng cách giữa đường thẳng và cột phía dưới */
+    width: 100%;
+    margin-left: 0%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+
+.divider {
+    width: 100%; /* Chiều dài của đường thẳng */
+    margin-bottom: 30px; /* Khoảng cách giữa các đường thẳng */
+    background-color: rgba(0, 0, 0, 0.1); /* Màu của đường thẳng với độ trong suốt 10% */
+    margin-left: 20px; /* Lùi các đường thẳng về phía bên trái */
+    margin-top: 5px; /* Lùi các đường thẳng về phía trên */
+
+}
+
+
+.divider1 {
+    border-bottom: 1px solid rgb(35, 33, 33); /* Màu và kích thước của đường thẳng */
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    justify-content: space-around; /* Chia đều không gian giữa các nhóm phần tử */
+
+}
+.input-group {
+    display: flex;
+    align-items:center;
+    flex: 1;
+    
+}
+
+.input-group label {
+    white-space: nowrap;
+    margin-right: 10px; /* Khoảng cách giữa nhãn và ô điền thời gian */
+}
+
+.input-group input {
+    width: 150px; /* Chỉnh kích thước nhỏ lại */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.button-group button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.divider2 {
+    border-top: 1px solid rgb(0, 0, 0); /* Màu và kích thước của đường thẳng */
+}
+
+.divider3 {
+    border-top: 1px solid rgb(0, 0, 0); /* Màu và kích thước của đường thẳng */
+}
+
+.divider4 {
+    border-top: 1px solid rgb(0, 0, 0); /* Màu và kích thước của đường thẳng */
+}
+
+.divider5 {
+    border-top: 1px solid rgb(0, 0, 0); /* Màu và kích thước của đường thẳng */
+}
+/* cột mới ở hôm nay*/
+
+
+nav button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.task-input, .task-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-input button, .task-filter button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-input button:hover, .task-filter button:hover {
+    background-color: #218838;
+}
+
+.task-filter button {
+    background-color: #007bff;
+}
+
+.task-filter button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #777;
+}
+
+li button {
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+li .edit-button {
+    background-color: #ffc107;
+}
+
+li .edit-button:hover {
+    background-color: #e0a800;
+}

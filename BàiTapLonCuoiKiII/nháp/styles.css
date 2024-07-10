@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  width: 90%;
+  max-width: 800px; /* Giảm kích thước tối đa của lịch */
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Giảm padding để giảm kích thước */
+}
+
+#calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; /* Giảm margin-bottom để giảm kích thước */
+}
+
+#calendar-header h1 {
+  margin: 0;
+  font-size: 20px; /* Giảm kích thước font */
+}
+
+#calendar-header button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px; /* Giảm padding để giảm kích thước */
+  font-size: 14px; /* Giảm kích thước font */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#calendar-header button:hover {
+  background-color: #0056b3;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px; /* Giảm khoảng cách giữa các ô */
+  width: 100%;
+}
+
+.day {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 5px; /* Giảm padding để giảm kích thước */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px; /* Giảm chiều cao của các ô */
+}
+
+.day-header {
+  font-weight: bold;
+  margin-bottom: 5px; /* Giảm margin-bottom để giảm kích thước */
+  font-size: 14px; /* Giảm kích thước font */
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  font-size: 12px; /* Giảm kích thước font */
+}
+
+.task {
+  background: #007bff;
+  color: #fff;
+  padding: 2px 5px; /* Giảm padding để giảm kích thước */
+  border-radius: 3px;
+  margin-bottom: 3px; /* Giảm khoảng cách giữa các công việc */
+}

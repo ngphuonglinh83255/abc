@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Công Việc</title>
+    <link rel="stylesheet" href="nha.css">
+    <script src="https://www.flaticon.com/uicons/interface-icons.js"></script>
+
+
+</head>
+<body>
+    <form action="nhap.php" method="post" enctype="multipart/form-data">
+        <div class="cot1">
+            <div class="cot1_1">
+                <div class="title-box">
+                    <h1>Tài Khoản</h1>
+                </div>
+                <img src="https://i.pinimg.com/564x/a7/da/a4/a7daa4792ad9e6dc5174069137f210df.jpg" alt="Description" class="right">
+            </div>
+        </div>
+        <div class="container">
+            <div class="column1">
+                <div class="img-title-container">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSDDbhM49yoRSjZeDaGO8fIFsP-vCC-qbnBoPWRnpKMx1Fa0xxJ" alt="Description">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkTJ43ObKaDQ0rxhPTydCZI7na5aEVW15PmZJfgMK6l1139hxl" alt="Description">
+                    <div class="title-box1">
+                        <h2>CÔNG VIỆC</h2>
+                    </div>
+                </div>
+                <nav class="nav-buttons">
+                  <button class="btntongquan-button"><i class="feather" data-feather="home"></i>Tổng Quan</button>
+                  <button class="btntongquan-button"><i class="feather" data-feather="user"></i>Công việc</button>
+                  <button class="btnbaocao-button"><i class="feather" data-feather="check"></i>Báo Cáo</button>
+                </nav>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm..." onkeypress="search(event)">
+                    <button type="button" class="btn search-button">Tìm kiếm</button>
+                </div>
+                <div class="cot2 right-aligned">
+                    <nav class="nav-buttons">
+                        <button class="vieccuatoi-button"><i class="feather" data-feather="user"></i>Việc của tôi</button>
+                        <button class="sukien-button"><i class="feather" data-feather="menu"></i>Sự kiện</button>
+                        <button class="kehoach-button"><i class="feather" data-feather="edit"></i>Kế hoạch</button>
+                    </nav>
+                </div>
+                <div class="cot3">
+                    <h3>Phòng nhân sự</h3>
+                </div>
+                <div class="cot4 right-aligned">
+                    <nav class="nav-buttons">
+                      <button class="btnabc"><i class="feather" data-feather="users"></i> Nhân viên</button>
+                      <button class="btnabc"><i class="feather" data-feather="globe"></i> Khác</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="top-section right-aligned">
+                    <div class="column2-1">
+                        <button class="btn">Hôm nay</button>
+                        <button class="btn">Việc của tôi</button>
+                        <button class="btn">Tôi giao</button>
+                        <button class="btn">Liên quan đến tôi</button>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <div class="column2-2">
+                        <div class="upper-sub-column">
+                           <h6></h6>
+                        </div>
+                        <div class="lower-sub-column">
+                          <div class="container11">
+                            <div class="divider divider1">
+                                <div class="input-group">
+                                    <label for="timeInput">Time</label>
+                                    <input type="datetime-local" id="timeInput" name="timeInput">
+                                </div>
+                                <div class="button-group">
+                                    <button id="expandButton">Mở rộng</button>
+                                    <button id="collapseButton">Thu gọn</button>
+                                    <button id="pinButton"><i class="feather" data-feather="download"></i></button>
+                                </div>
+                            </div>
+                            <div class="divider divider2"></div>
+                            <div class="divider divider3"></div>
+                            <div class="divider divider4"></div>
+                            <div class="divider divider5"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+    <script src="nhap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+  
+</body>
+</html>
