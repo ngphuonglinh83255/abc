@@ -1,95 +1,179 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+/* CSS cơ bản để thiết kế chi tiết sự kiện nằm bên phải các ô sự kiện */
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  box-sizing: border-box;
 }
 
-.content {
-  width: 90%;
-  max-width: 800px; /* Giảm kích thước tối đa của lịch */
-  margin: auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 10px; /* Giảm padding để giảm kích thước */
-}
-
-#calendar-container {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-#calendar-header {
+.header {
+  background-color: #333;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-options {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+.account-options a {
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.account:hover .account-options {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  min-width: 250px;
+  padding: 20px;
+}
+
+.sidebar-buttons button {
   width: 100%;
-  margin-bottom: 10px; /* Giảm margin-bottom để giảm kích thước */
-}
-
-#calendar-header h1 {
-  margin: 0;
-  font-size: 20px; /* Giảm kích thước font */
-}
-
-#calendar-header button {
-  background-color: #007bff;
-  color: #fff;
   border: none;
-  padding: 5px 10px; /* Giảm padding để giảm kích thước */
-  font-size: 14px; /* Giảm kích thước font */
-  border-radius: 5px;
+  background: none;
+  padding: 10px 0;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   cursor: pointer;
 }
 
-#calendar-header button:hover {
-  background-color: #0056b3;
+.sidebar-buttons button:hover {
+  background-color: #ddd;
 }
 
-#calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px; /* Giảm khoảng cách giữa các ô */
-  width: 100%;
-}
-
-.day {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  padding: 5px; /* Giảm padding để giảm kích thước */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100px; /* Giảm chiều cao của các ô */
-}
-
-.day-header {
-  font-weight: bold;
-  margin-bottom: 5px; /* Giảm margin-bottom để giảm kích thước */
-  font-size: 14px; /* Giảm kích thước font */
-}
-
-.tasks {
-  list-style: none;
+.sidebar ul {
+  list-style-type: none;
   padding: 0;
-  margin: 0;
-  flex-grow: 1;
-  overflow-y: auto;
-  font-size: 12px; /* Giảm kích thước font */
+  margin: 20px 0;
 }
 
-.task {
-  background: #007bff;
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt khỏi khu vực chính */
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.event {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event img {
+  max-width: 100px;
+  border-radius: 5px;
+}
+
+.event-info {
+  flex: 1;
+}
+
+.event-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.event-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.event-info .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
   color: #fff;
-  padding: 2px 5px; /* Giảm padding để giảm kích thước */
-  border-radius: 3px;
-  margin-bottom: 3px; /* Giảm khoảng cách giữa các công việc */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.event-info .btn:hover {
+  background-color: #555;
+}
+
+#events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+#event-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#event-detail-info {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content {
+      padding: 10px;
+  }
+  .event {
+      flex-direction: column;
+  }
+  .event img {
+      max-width: 100%;
+      margin-bottom: 10px;
+  }
 }

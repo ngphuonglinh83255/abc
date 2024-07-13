@@ -9,9 +9,9 @@
 <body>
     <div class="container">
         <h2>Đăng Ký</h2>
-        <form id="registrationForm">
+        <form id="registrationForm" action="process_registration.php" method="POST">
             <div class="form-group">
-                <label for="name">Họ Và Tên(<span style="color:red">*</span>)</label>
+                <label for="hovaten">Họ Và Tên(<span style="color:red">*</span>)</label>
                 <input type="text" name="hovaten" required class="input1"/>
             </div>
             <div class="form-group">
@@ -37,18 +37,22 @@
             </div>
             <div class="form-group">
                 <label for="diachi">Địa Chỉ</label>
-                <input type="diachi" id="diachi" name="diachi"  class="input1"/>
+                <input type="text" id="diachi" name="diachi" class="input1"/>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email"  class="input1"/>
+                <input type="email" id="email" name="email" class="input1"/>
             </div>
             <div class="input">
-                <span tyle="color:black; margin-left=10px;"></span>
-                
+                <span style="color:black; margin-left:10px;"></span>
             </div>
             <div class="input">
-                <label for="xacnhan"> Bạn có phải là người máy không </label>
+                <label for="xacnhan_dieukhoan">Bạn có đồng ý với điều khoản không?</label>
+                <span style="color:black; margin-left:10px;"></span>
+                 <input type="checkbox" name="xacnhan_dieukhoan" value="1" style="margin-left: 30px;margin-right: 5px;">Có
+            </div>
+            <div class="input">
+                <label for="xacnhan">Bạn có phải là người máy không?</label>
                 <span style="color:black; margin-left:10px;"></span>
                  <input type="radio" name="xacnhan" value="1" checked="checked" style="margin-left: 30px;margin-right: 5px;">Có
                   <input type="radio" name="xacnhan" value="0" style="margin-left: 30px;margin-right: 5px;">Không

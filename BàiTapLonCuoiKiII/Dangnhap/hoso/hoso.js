@@ -129,3 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadProfileInfo();
 });
+document.getElementById('back-btn').addEventListener('click', function() {
+    window.history.back();
+});

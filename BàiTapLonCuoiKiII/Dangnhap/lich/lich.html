@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="header">
-        <input type="text" id="search-header" placeholder="Tìm kiếm...">
+        <input type="text" id="search-header" placeholder="Search...">
         <div class="account">
             <img id="avatar" src="https://i.pinimg.com/736x/63/50/38/635038fc44faa6546510702e43f825c3.jpg" alt="Avatar">
             <span id="username">Leen</span>
@@ -24,16 +24,16 @@
     <div class="container">
         <div class="sidebar">
             <div class="sidebar-buttons">
-                <button data-url="http://127.0.0.1:5500/Dangnhap/trangchu/duan.html"><i class="fas fa-tasks"></i> Công Việc</button>
-                <button data-url="https://example.com/cong-viec"><i class="fas fa-cog"></i> DS Dự án</button>
-                <button data-url="https://example.com/cong-viec"><i class="fas fa-user"></i> Cá Nhân</button>  
+                <button data-url="http://127.0.0.1:5500/Dangnhap/trangchu/congviec.html"><i class="fas fa-tasks"></i> Công Việc</button>
+                <button data-url="http://127.0.0.1:5500/Dangnhap/duan/duan.html"><i class="fas fa-cog"></i> DS Dự án</button>
+                <button data-url="http://127.0.0.1:5500/Dangnhap/nhiemvu/canhan.html"><i class="fas fa-user"></i> Cá Nhân</button>  
                 <button data-url="https://example.com/cong-viec"><i class="fas fa-flag"></i> Báo cáo</button>
                 <button data-url="http://127.0.0.1:5500/Dangnhap/lich/lich.html"><i class="fas fa-calendar-alt"></i> Lịch</button>
             </div>
             <hr>
             <ul>
                 <li><a href="http://127.0.0.1:5500/Dangnhap/trangchu/kehoach.html"> Kế hoạch</a></li>
-                <li><a href="#"> Sự kiện</a></li>
+                <li><a href="http://127.0.0.1:5500/Dangnhap/s%E1%BB%B1%20ki%E1%BB%87n/sukien.html"> Sự kiện</a></li>
                 <li><a href="#">Khác</a></li>
             </ul>
             <hr>
@@ -75,7 +75,12 @@
             '2024-07-15': ['Công việc 6'],
             '2024-07-20': ['Công việc 7'],
             '2024-07-25': ['Công việc 9'],
-            '2024-08-01': ['Công việc 10']
+            '2024-08-01': ['Công việc 10'],
+            '2024-07-02': ['Công việc 11'],
+            '2024-07-08': ['Công việc 12'],
+            '2024-07-18': ['Công việc 13'],
+            '2024-07-22': ['Công việc 14'],
+            '2024-07-29': ['Công việc 15']
         };
 
         let currentYear = new Date().getFullYear();
@@ -116,28 +121,6 @@
                         taskList.appendChild(taskItem);
                     });
                 }
-
-                // Lắng nghe sự kiện nhấn phím Enter trên ô nhập công việc
-                const input = dayElement.querySelector('.add-task input');
-                input.addEventListener('keypress', (event) => {
-                    if (event.key === 'Enter') {
-                        const taskText = input.value.trim();
-                        if (taskText) {
-                            const taskItem = document.createElement('li');
-                            taskItem.classList.add('task');
-                            taskItem.textContent = taskText;
-                            taskList.appendChild(taskItem);
-                            
-                            // Cập nhật đối tượng tasks
-                            if (!tasks[dateKey]) {
-                                tasks[dateKey] = [];
-                            }
-                            tasks[dateKey].push(taskText);
-                            
-                            input.value = ''; // Xóa nội dung trong ô nhập
-                        }
-                    }
-                });
 
                 calendar.appendChild(dayElement);
             }

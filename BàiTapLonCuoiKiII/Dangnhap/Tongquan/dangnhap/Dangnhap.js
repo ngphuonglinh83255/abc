@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Nếu thông tin hợp lệ, chuyển hướng đến trang mới
         if (email && password) { // Đây là kiểm tra cơ bản, bạn có thể thêm kiểm tra phức tạp hơn
-            window.location.href = "http://127.0.0.1:5500/Dangnhap/trangchu/duan.html";
+            window.location.href = "http://127.0.0.1:5500/Dangnhap/trangchu/congviec.html";
         } else {
             alert("Please enter valid email and password.");
         }

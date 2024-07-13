@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #4c587d, #bad0e7); /* Thêm màu loang ở đây */
+    background: linear-gradient(135deg, #4c587d, #4c587d); /* Thêm màu loang ở đây */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: #788ab2;
+    background-color: #4c587d;
 }
 
 #error-message {
