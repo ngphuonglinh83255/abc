@@ -160,7 +160,7 @@ body {
     font-size: 12px;
 }
 .overview {
-    width:535px;
+    width:620px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -168,17 +168,17 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .overview2 {
-    width:530px;
+    width:620px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     margin-left:20px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right:5px;
 }
 .box{
     display:flex;
-    margin-right: 10px; 
 }
 .chart-container {
     width: 100%;
@@ -193,7 +193,7 @@ body {
     height: 200px;
 }
 .status-container {
-    width: 300%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -216,9 +216,9 @@ body {
     font-weight: bold;
 }
 .box2{
-    max-height: 400px; /* Đặt chiều cao tối đa cho phần tử có thanh cuộn */
+    max-height: 400px; 
     overflow-y: auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .card {
     
@@ -249,10 +249,10 @@ body {
     border-radius: 5px;
 }
 .progress-blue {
-    background-color: #3498db;
+    background-color: #305872b3;
 }
 .progress-red {
-    background-color: #e74c3c;
+    background-color: #7f4039b5;
 }
 .project-list-header {
     display: flex;

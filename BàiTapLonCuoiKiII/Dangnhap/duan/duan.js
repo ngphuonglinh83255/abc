@@ -86,36 +86,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Vẽ biểu đồ bằng Chart.js
-    const ctx = document.getElementById('overallChart').getContext('2d');
-    const overallChart = new Chart(ctx, {
+    // Đoạn mã sau đã được di chuyển ra ngoài sự kiện DOMContentLoaded
+    // Dữ liệu cho biểu đồ overallChart
+    var overallChart = document.getElementById('overallChart').getContext('2d');
+    var overallChartInstance = new Chart(overallChart, {
         type: 'doughnut',
         data: {
             
             datasets: [{
                 data: [20, 30, 15, 35],
-                backgroundColor: ['#cde6f7', '#1abc9c', '#375dc4', '#5b92db']
+                backgroundColor: [' #cde6f7', '#a3a2d1c8', ' #617cc6', ' #263850']
             }]
         },
         options: {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top'
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            var label = context.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed !== null) {
+                                label += context.parsed + '%';
+                            }
+                            return label;
+                        }
+                    }
                 }
             }
         }
     });
 
-    // Cập nhật giá trị phần trăm trên thanh trạng thái
-   
-});
- const statusData = [20, 30, 15, 35];
-    const statusBars = document.querySelectorAll('.status-bar');
-    const statusValues = document.querySelectorAll('.status-value span:last-child');
-
-   
-
-    statusValues.forEach((value, index) => {
-        value.textContent = statusData[index] + '%';
+    // Dữ liệu cho biểu đồ overallChart2
+    var overallChart2 = document.getElementById('overallChart2').getContext('2d');
+    var overallChart2Instance = new Chart(overallChart2, {
+        type: 'doughnut',
+        data: {
+            
+            datasets: [{
+                data: [10, 25, 30, 35],
+                backgroundColor: ['#38648e58', '#a0d7f0', '#2c4d6f', '#2c6457']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            var label = context.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed !== null) {
+                                label += context.parsed + '%';
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
     });
+});
