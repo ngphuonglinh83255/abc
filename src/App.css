@@ -1,38 +1,303 @@
-.App {
+/* Tổng thể giao diện */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5; /* Nền sáng và nhẹ nhàng */
+  color: #333; /* Màu chữ tối hơn để dễ đọc */
+}
+
+/* Thanh Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng nhẹ */
+  transition: transform 0.3s ease; /* Hiệu ứng trượt */
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #0056b3;
+}
+
+/* Nội dung chính */
+.content {
+  margin-left: 260px;
+  padding: 30px;
+  min-height: 100vh; /* Đảm bảo content chiếm hết chiều cao */
+}
+
+/* Tiêu đề chính */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+/* Nút thêm hàng hóa */
+.add-product-container {
+  margin-bottom: 5px;
+}
+
+.add-product-btn {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-product-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Input tìm kiếm */
+input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px;
+  margin: 0px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Bảng thông tin sản phẩm */
+table {
+  width: 100%;
+  margin-top: 5px;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Thêm đổ bóng nhẹ cho bảng */
+}
+
+table th, table td {
+  padding: 12px;
   text-align: center;
+  border: 1px solid #ddd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table td {
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Nút Chỉnh sửa và Xóa */
+.action-btns button {
+  padding: 10px 20px;
+  font-size: 1.1rem; /* Tăng kích thước nút */
+  border: none;
+  border-radius: 50px; /* Bo góc hoàn toàn */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1); /* Thêm bóng nhẹ */
+}
+
+/* Nút Chỉnh sửa */
+.edit-btn {
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  background-color: #17a2b8; /* Màu xanh dương */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Bo góc hoàn toàn */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(23, 162, 184, 0.1); /* Thêm bóng nhẹ */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-right: 20px; /* Khoảng cách giữa các nút */
+}
+
+edit-btn:hover {
+  background-color: #138496; /* Màu tối hơn khi hover */
+  transform: scale(1.05); /* Phóng to khi hover */
+  box-shadow: 0 8px 16px rgba(23, 162, 184, 0.2); /* Tăng bóng khi hover */
+}
+
+/* Nút Xóa */
+.delete-btn {
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  background-color: #dc3545; /* Màu đỏ */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Bo góc hoàn toàn */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(220, 53, 69, 0.1); /* Thêm bóng nhẹ */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Màu đỏ đậm khi hover */
+  transform: scale(1.05); /* Phóng to khi hover */
+  box-shadow: 0 8px 16px rgba(220, 53, 69, 0.2); /* Tăng bóng khi hover */
+}
+/* Phân trang */
+.pagination {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.pagination button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 8px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination span {
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
 }
+
+/* Nội dung modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 450px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #007bff;
+}
+
+/* Các trường trong modal */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 5px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.add-product-btn,
+.close-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-product-btn:hover,
+.close-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hiệu ứng Hover */
+table td:hover {
+  background-color: #f1f1f1;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+
