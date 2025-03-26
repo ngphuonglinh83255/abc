@@ -44,7 +44,7 @@ Ubuntu là một bản phân phối Linux phổ biến, được phát triển b
 - **Kho phần mềm phong phú**: Hỗ trợ cài đặt nhiều phần mềm thông qua APT package manager.
 - **Bảo mật tốt**: Ubuntu thường xuyên cập nhật bản vá bảo mật.
 - **Tích hợp tốt với môi trường phát triển**: Hỗ trợ nhiều công cụ lập trình như Python, Node.js, Docker, v.v.
-- **Hỗ trợ hệ thống WSL**: Ubuntu là bản phối được hỗ trợ chính thức trên **Windows Subsystem for Linux (WSL)**, giúp người dùng Windows dễ dàng sử dụng.
+
 ---
 
 ## 4. Cài đặt Ubuntu trên VMware Workstation
@@ -64,7 +64,7 @@ Ubuntu là một bản phân phối Linux phổ biến, được phát triển b
 
 # 4. Tổng hợp kiến thức, ví dụ đã thực hành về các khái niệm, giao thức, công cụ mạng cơ bản
 
-## 4.1. Các khái niệm cơ bản
+## 4.1. Các khái niệm
 - **IP Address (Địa chỉ IP)**: Là địa chỉ định danh của một thiết bị trong mạng.
 - **Subnet Mask (Mặt nạ mạng con)**: Xác định phần mạng và phần host trong địa chỉ IP.
 - **MAC Address (Địa chỉ MAC)**: Địa chỉ vật lý của card mạng.
@@ -72,7 +72,8 @@ Ubuntu là một bản phân phối Linux phổ biến, được phát triển b
 - **DNS (Domain Name System)**: Hệ thống phân giải tên miền thành địa chỉ IP.
 - **DHCP (Dynamic Host Configuration Protocol)**: Giao thức cấp phát địa chỉ IP tự động.
 - **NAT (Network Address Translation)**: Cơ chế chuyển đổi địa chỉ IP riêng thành địa chỉ công cộng.
-## 4.2. Các Thành Phần Cơ Bản của Mạng Máy Tính** 
+## 4.2. Các Thành Phần Cơ Bản của Mạng Máy Tính
+
 ### **4.2.1. Thiết bị đầu cuối (End Devices)**  
 Đây là các thiết bị tham gia vào mạng, bao gồm:  
 - **Máy tính cá nhân (PC, Laptop):** Gửi, nhận dữ liệu, xử lý thông tin.  
@@ -91,7 +92,7 @@ Ubuntu là một bản phân phối Linux phổ biến, được phát triển b
 - **Dây cáp mạng:** Cáp xoắn đôi, cáp đồng trục, cáp quang.  
 - **Sóng vô tuyến (Wireless):** Wi-Fi, Bluetooth, NFC, mạng di động (4G, 5G).  
 
-## 4.3. Các Loại Mạng Máy Tính**  
+## 4.3. Các Loại Mạng Máy Tính
 
 ### **4.3.1. Mạng LAN (Local Area Network) - Mạng cục bộ**  
 - Kết nối các thiết bị trong một khu vực nhỏ.  
@@ -107,7 +108,7 @@ Ubuntu là một bản phân phối Linux phổ biến, được phát triển b
 ### **4.3.4. Mạng PAN (Personal Area Network) - Mạng cá nhân**  
 - Kết nối thiết bị cá nhân qua Bluetooth, NFC.  
 
-## 4.4. Các giao thức mạng cơ bản và vai trò
+## 4.4. Các giao thức mạng và vai trò
 - **TCP/IP**:
   - *Vai trò*: Đảm bảo dữ liệu được truyền đi một cách đáng tin cậy giữa các thiết bị trong mạng.
   - *Ưu điểm*: Đảm bảo dữ liệu được truyền đầy đủ và theo đúng thứ tự.
@@ -129,7 +130,7 @@ Ubuntu là một bản phân phối Linux phổ biến, được phát triển b
   - *Ưu điểm*: Truyền tải nhanh, không có độ trễ do kiểm tra lỗi.
   - *Nhược điểm*: Không đảm bảo dữ liệu đến đích nguyên vẹn hoặc đúng thứ tự.
 
-## 4.5. Các công cụ mạng đã thực hành
+## 4.5. Các công cụ mạng
 ### 1. **ping**: Kiểm tra kết nối giữa hai thiết bị.
 ```sh
 ping google.com
@@ -158,3 +159,61 @@ curl -I https://google.com
 ```sh
 wget https://example.com/file.zip
 ```
+
+
+## 🔹 **Git và GitHub**
+### 📂 **Các thao tác Git đã thực hành**
+- **Khởi tạo Repository**
+  ```bash
+  git init
+  ```
+- **Thêm file vào staging area**
+  ```bash
+  git add .
+  ```
+- **Commit thay đổi**
+  ```bash
+  git commit -m "Initial commit"
+  ```
+- **Liên kết remote repository**
+  ```bash
+  git remote add origin <URL>
+  ```
+- **Push code lên GitHub**
+  ```bash
+  git push origin main
+  ```
+- **Tạo nhánh mới**
+  ```bash
+  git branch feature-branch
+  ```
+- **Chuyển sang nhánh mới**
+  ```bash
+  git checkout feature-branch
+  ```
+- **Merge nhánh vào main**
+  ```bash
+  git merge feature-branch
+  ```
+- **Kiểm tra trạng thái repository**
+  ```bash
+  git status
+  ```
+- **Xem lịch sử commit**
+  ```bash
+  git log --oneline
+  ```
+- **Xóa một nhánh cục bộ**
+  ```bash
+  git branch -d feature-branch
+  ```
+- **Xóa một nhánh trên remote**
+  ```bash
+  git push origin --delete feature-branch
+  ```
+- **Làm việc với stash (lưu tạm thời thay đổi)**
+  ```bash
+  git stash
+  git stash list
+  git stash pop
+  ```
